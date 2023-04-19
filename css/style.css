@@ -1,0 +1,28 @@
+body{
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+h3.text-center{ 
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.select{
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-select{
+    width:20%;
+}
+
+.container-input{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container-input #numero{
+    margin: 0 auto;
+}
