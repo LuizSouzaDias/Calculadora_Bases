@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/icons8-matemática-16.png">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""><img src="assets/images/logo.png" width="80px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Conversão de Bases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="operacaoBases.html">Operação com Bases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="algoritmoEuclides.html">Algoritmo de Euclides</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Crivo de Eratóstenes</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav> 
+
+    <section id="conversao-bases">
+        <div class="container">
+            <h1 class="text-center">Operações entre Bases</h1>
+
+            <div class="container-input">
+              <div class="form-group">
+                  <label for="numero">Base:</label>
+                  <select class="form-select" id="base" onchange="habilitarOperacao()">
+                    <option></option>
+                    <option value="bi" id="base_bi">Binário</option>
+                    <option value="dec" id="base_dec">Decimal</option>
+                    <option value="hexa" id="base_hexa">Hexadecimal</option>
+                </select> 
+              </div>
+            </div>
+
+            <div class="select">
+
+              <div class="div_select">
+                <div>
+                  <label for="numero1">Número 1:</label>
+                  <input type="text" class="form-control" id="numero1" required  onchange="habilitarOperacao()">
+                </div>
+              </div>
+
+              <div class="div_select">
+                <div>
+                  <label for="numero2">Número 2:</label>
+                  <input type="text" class="form-control" id="numero2" required  onchange="habilitarOperacao()">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="container-input">
+                <div class="form-group">
+                    <label for="numero">Operação:</label>
+                    <select class="form-select" id="operacao" onchange="habilitarOperacao()">
+                      <option></option>
+                      <option value="+" id="soma">Soma</option>
+                      <option value="-" id="sub">Subtração</option>
+                      <option value="*" id="multi">Multiplicação</option>
+                  </select> 
+                </div>
+            </div>
+
+            <div class="container-input">
+                <button type="submit" onclick="operar()" class="btn btn-primary" id="btn_operar" disabled>Operar</button>
+                <button type="reset" onclick="limparCampos()" class="btn btn-danger" id="btn_limpar">Limpar Campos</button>
+            </div>
+
+            <div class="container-input">
+
+              <div class="div_resultado">
+                <h4 id="resultado"></h4>
+                <div class="div_explicacao">
+                  <p id="explicacao"></p>
+                </div>
+              </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+    
+    <script src="js/script2.js"></script>
+</body>
+</html>

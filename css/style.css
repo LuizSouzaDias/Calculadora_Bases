@@ -3,9 +3,31 @@ body{
     margin: 0;
 }
 
-h3.text-center{ 
+/*section nav*/
+
+nav ul li a{
+    margin-left: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+    background: #383c44;
+}
+
+nav ul li a.active{
+    border: #f2f2f2 1px solid;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+/*fim section nav*/
+
+h1.text-center{ 
     margin-top: 25px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .select{
@@ -17,12 +39,33 @@ h3.text-center{
     width:20%;
 }
 
+/*operacaoBase.html*/
+.form-group select{
+    width: 100%;
+}
+/*fim*/
+
 .container-input{
     display: flex;
     justify-content: center;
     margin-top: 50px;
 }
 
+.container-input button{
+    margin: 20px;
+}
+
 .container-input #numero{
     margin: 0 auto;
+}
+
+.div_select{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_select div select{
+    width: 150px;
 }

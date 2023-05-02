@@ -20,13 +20,13 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Conversão de Bases</a>
+                <a class="nav-link" href="index.html">Conversão de Bases</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="operacaoBases.html">Operação com Bases</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="algoritmoEuclides.html">Algoritmo de Euclides</a>
+                <a class="nav-link active" href="algoritmoEuclides.html">Algoritmo de Euclides</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Crivo de Eratóstenes</a>
@@ -38,47 +38,28 @@
 
     <section id="conversao-bases">
         <div class="container">
-            <h1 class="text-center">Conversão de Bases</h1>
+            <h1 class="text-center">Algoritmo de Euclides</h1>
 
             <div class="select">
 
               <div class="div_select">
                 <div>
-                  <label for="numero">Base:</label>
-                  <select class="form-select" id="baseInicial" onchange="habilitarConversor()">
-                      <option></option>
-                      <option value="bi" id="base_bi">Binário</option>
-                      <option value="dec" id="base_dec">Decimal</option>
-                      <option value="hexa" id="base_hexa">Hexadecimal</option>
-                  </select> 
+                  <label for="numero1">Número 1:</label>
+                  <input type="text" class="form-control" id="numero1" required  onchange="habilitarOperacao()">
                 </div>
               </div>
-
-              <h5>Converter Para</h5>
 
               <div class="div_select">
                 <div>
-                  <label for="numero">Resultado:</label>
-                  <select class="form-select" id="conversor" disabled onchange="habilitarBtn()" >
-                    <option></option>
-                    <option value="bi" id="conversor_bi">Binário</option>
-                    <option value="dec" id="conversor_dec">Decimal</option>
-                    <option value="hexa" id="conversor_hexa">Hexadecimal</option>
-                  </select> 
+                  <label for="numero2">Número 2:</label>
+                  <input type="text" class="form-control" id="numero2" required  onchange="habilitarOperacao()">
                 </div>
               </div>
 
             </div>
 
             <div class="container-input">
-                <div class="form-group">
-                    <label for="numero">Número:</label>
-                    <input type="text" class="form-control" id="numero" required onchange="habilitarBtn()">
-                </div>
-            </div>
-
-            <div class="container-input">
-                <button type="submit" onclick="converter()" class="btn btn-primary" id="btn_converter" disabled>Converter</button>
+                <button type="submit" onclick="operar()" class="btn btn-primary" id="btn_operar" disabled>Operar</button>
                 <button type="reset" onclick="limparCampos()" class="btn btn-danger" id="btn_limpar">Limpar Campos</button>
             </div>
 
@@ -98,6 +79,6 @@
 
     </section>
     
-    <script src="js/script.js"></script>
+    <script src="js/script3.js"></script>
 </body>
 </html>
